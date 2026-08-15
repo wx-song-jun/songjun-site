@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products | SONGJUN - Air Compressors &amp; Spare Parts</title>
+<meta name="description" content="SONGJUN product list: screw air compressors, airends, filters, oils, valves, sensors, coolers. Verified items with real pictures and prices.">
+<style>
+  :root{
+    --navy:#1a1a2e; --navy2:#2d2d44; --dark:#111111; --orange:#ff6b35; --orange2:#ff8c5a;
+    --price:#e63946; --light:#f5f5f5; --line:#e5e5ea; --text:#22222e; --muted:#6a6a80;
+    --white:#ffffff; --wa:#25d366;
+    --font-display:Bahnschrift,"DIN Alternate","Arial Narrow",Arial,sans-serif;
+    --font-body:"Segoe UI",system-ui,-apple-system,"Microsoft YaHei",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:var(--font-body);color:var(--text);background:var(--white);line-height:1.6;font-size:15px;}
+  img{max-width:100%;display:block;}
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  .container{max-width:1240px;margin:0 auto;padding:0 20px;}
+
+  .topbar{background:var(--navy);color:#fff;}
+  .topbar .inner{display:flex;align-items:center;gap:18px;padding:12px 0;flex-wrap:wrap;}
+  .topbar .logo{display:flex;align-items:center;gap:10px;}
+  .topbar .logo img{width:auto;height:38px;object-fit:contain;background:#fff;border-radius:4px;padding:3px;}
+  .topbar .logo b{font-family:var(--font-display);font-size:20px;letter-spacing:1.5px;font-weight:700;}
+  .topbar .logo b span{color:var(--orange);}
+  .topbar .co{font-size:12.5px;color:#b9b9d0;border-left:1px solid rgba(255,255,255,.18);padding-left:18px;}
+  .topbar .co b{display:block;color:#fff;font-size:13.5px;font-weight:600;}
+  .topbar .co span{color:#9a9ab5;}
+
+  nav.mainnav{background:var(--dark);position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.35);}
+  nav.mainnav .inner{display:flex;align-items:center;}
+  nav.mainnav .navlinks{display:flex;align-items:center;}
+  nav.mainnav .navlinks > li > a{display:flex;align-items:center;gap:6px;color:#d6d6e2;padding:15px 18px;font-size:14px;font-weight:500;transition:color .2s;cursor:pointer;}
+  nav.mainnav .navlinks > li > a:hover, nav.mainnav .navlinks > li > a.active{color:var(--orange);}
+  nav.mainnav .navlinks > li > a .caret{width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-2px);opacity:.7;}
+  .dropdown{position:absolute;top:100%;left:0;background:#1c1c2a;min-width:230px;box-shadow:0 10px 30px rgba(0,0,0,.5);opacity:0;visibility:hidden;transform:translateY(8px);transition:all .2s;z-index:50;}
+  nav.mainnav .navlinks > li:hover .dropdown{opacity:1;visibility:visible;transform:translateY(0);}
+  .dropdown a{display:block;color:#cfcfe0;padding:10px 16px;font-size:13.5px;border-left:2px solid transparent;transition:all .15s;}
+  .dropdown a:hover{color:var(--orange);border-left-color:var(--orange);background:rgba(255,107,53,.06);}
+  nav.mainnav .search{display:flex;align-items:center;background:#26263a;border:1px solid #33334d;border-radius:4px;padding:0 10px;margin:0 16px 0 auto;height:34px;flex:0 1 220px;}
+  nav.mainnav .search input{background:transparent;border:none;outline:none;color:#fff;font-size:13px;width:100%;font-family:var(--font-body);}
+  nav.mainnav .search input::placeholder{color:#8a8aa5;}
+  nav.mainnav .search svg{width:15px;height:15px;fill:#8a8aa5;flex-shrink:0;}
+  nav.mainnav .cta{display:flex;align-items:center;gap:10px;padding:10px 20px;}
+  .btn-supplier{background:var(--orange);color:#fff;font-weight:700;font-size:13px;padding:9px 16px;border-radius:4px;transition:background .2s;white-space:nowrap;font-family:var(--font-body);}
+  .btn-supplier:hover{background:#e85a26;}
+  .hamburger{display:none;background:none;border:none;cursor:pointer;padding:14px 12px;margin-left:auto;}
+  .hamburger span{display:block;width:22px;height:2px;background:#d6d6e2;margin:5px 0;transition:all .25s;}
+
+  .pagehead{background:var(--navy);padding:34px 0;color:#fff;}
+  .pagehead h1{font-family:var(--font-display);font-size:30px;font-weight:700;letter-spacing:2px;text-transform:uppercase;}
+  .pagehead .crumb{font-size:12.5px;color:#9a9ab8;margin-top:6px;}
+  .pagehead .crumb a:hover{color:var(--orange);}
+  .pagehead .crumb span{color:var(--orange2);}
+
+  .filters{padding:22px 0 4px;}
+  .filters .inner{display:flex;gap:10px;flex-wrap:wrap;}
+  .filters button{background:var(--light);border:1px solid var(--line);border-radius:30px;padding:8px 18px;font-size:13px;font-weight:600;color:var(--text);cursor:pointer;transition:all .2s;font-family:var(--font-body);}
+  .filters button:hover{border-color:var(--orange);color:var(--orange);}
+  .filters button.active{background:var(--orange);border-color:var(--orange);color:#fff;}
+
+  .plist{padding:26px 0 60px;}
+  .prods{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .prod{background:var(--white);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;transition:all .25s;}
+  .prod:hover{transform:translateY(-5px);box-shadow:0 16px 34px rgba(26,26,46,.14);border-color:#d0d0dc;}
+  .prod .p-img{position:relative;height:180px;background:var(--light);overflow:hidden;}
+  .prod .p-img img{width:100%;height:100%;object-fit:cover;transition:transform .35s;}
+  .prod:hover .p-img img{transform:scale(1.05);}
+  .prod .p-img .p-moq{position:absolute;left:10px;top:10px;background:rgba(17,17,17,.78);color:#fff;font-size:11px;padding:3px 9px;border-radius:3px;font-weight:600;}
+  .prod .p-img .p-cat{position:absolute;right:10px;top:10px;background:rgba(255,107,53,.92);color:#fff;font-size:10.5px;padding:3px 8px;border-radius:3px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;}
+  .prod .p-body{padding:14px;display:flex;flex-direction:column;flex:1;}
+  .prod .p-title{font-size:13.5px;font-weight:600;color:var(--text);line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:39px;}
+  .prod .p-price{margin-top:10px;font-size:16px;font-weight:800;color:var(--price);font-family:var(--font-display);}
+  .prod .p-price .contact{color:var(--orange);}
+  .prod .p-btn{margin-top:12px;text-align:center;border:1px solid var(--navy);color:var(--navy);font-size:12.5px;font-weight:700;padding:8px 10px;border-radius:4px;transition:all .2s;letter-spacing:.5px;text-transform:uppercase;}
+  .prod .p-btn:hover{background:var(--orange);border-color:var(--orange);color:#fff;}
+
+  footer{background:#0d0d18;color:#9a9ab5;padding:44px 0 26px;font-size:13px;}
+  footer .grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:36px;margin-bottom:30px;}
+  footer h4{color:#fff;font-family:var(--font-display);font-size:14px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;}
+  footer .brand img{width:auto;height:34px;background:#fff;border-radius:4px;padding:2px;margin-bottom:12px;}
+  footer ul li{margin-bottom:8px;}
+  footer ul a{color:#9a9ab5;transition:color .15s;}
+  footer ul a:hover{color:var(--orange);}
+  footer .bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;color:#6a6a85;}
+
+  .float-contact{position:fixed;right:18px;bottom:18px;z-index:200;display:flex;flex-direction:column;gap:10px;}
+  .float-contact a{display:flex;align-items:center;gap:8px;color:#fff;font-size:13px;font-weight:700;padding:12px 18px;border-radius:50px;box-shadow:0 8px 24px rgba(0,0,0,.3);transition:transform .2s;}
+  .float-contact a:hover{transform:translateY(-2px);}
+  .float-contact .f-supplier{background:var(--orange);}
+  .float-contact .f-wa{background:var(--wa);}
+  .float-contact svg{width:18px;height:18px;fill:#fff;}
+
+  @media (max-width:1024px){ .prods{grid-template-columns:repeat(3,1fr);} }
+  @media (max-width:768px){
+    .topbar .co{display:none;}
+    nav.mainnav .navlinks{display:none;position:absolute;top:100%;left:0;right:0;background:var(--dark);flex-direction:column;align-items:stretch;}
+    nav.mainnav .navlinks.open{display:flex;}
+    nav.mainnav .navlinks > li > a{padding:14px 20px;}
+    .dropdown{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;background:#1c1c2a;display:none;min-width:0;}
+    nav.mainnav .navlinks > li.open .dropdown{display:block;}
+    nav.mainnav .search{display:none;}
+    nav.mainnav .cta{display:none;}
+    .hamburger{display:block;}
+    .prods{grid-template-columns:repeat(2,1fr);}
+    footer .grid{grid-template-columns:1fr 1fr;gap:24px;}
+    .float-contact a span{display:none;}
+    .float-contact a{padding:13px;border-radius:50%;}
+  }
+  @media (max-width:480px){
+    .prods{grid-template-columns:1fr;}
+    footer .grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container inner">
+    <a class="logo" href="index.html">
+      <img src="site-assets/products/product_03.png" alt="SONGJUN logo">
+      <b>SONG<span>JUN</span></b>
+    </a>
+    <div class="co">
+      <b>Wuxi Songjun Machinery Technology Co., Ltd.</b>
+      <span>Jiangsu, China | Air Compressor, Air Compressor Parts</span>
+    </div>
+  </div>
+</div>
+
+<nav class="mainnav">
+  <div class="container inner">
+    <ul class="navlinks" id="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a href="#" class="active">Products <span class="caret"></span></a>
+        <div class="dropdown">
+          <a href="#all">All Products</a>
+          <a href="#machines">Air Compressors</a>
+          <a href="#ends">Air Ends &amp; Heads</a>
+          <a href="#filters">Filters &amp; Separators</a>
+          <a href="#oils">Oil &amp; Lubricants</a>
+          <a href="#parts">Valves, Gears &amp; Parts</a>
+          <a href="#controls">Controls, Sensors &amp; Coolers</a>
+        </div>
+      </li>
+      <li><a href="index.html#showcase">Company</a></li>
+    </ul>
+    <div class="search">
+      <svg viewBox="0 0 24 24"><path d="M15.5 14h-.8l-.3-.3c1-1.1 1.6-2.6 1.6-4.2C16 5.9 13.1 3 9.5 3S3 5.9 3 9.5 5.9 16 9.5 16c1.6 0 3.1-.6 4.2-1.6l.3.3v.8l5 5 1.5-1.5-5-5zm-6 0C7 14 5 12 5 9.5S7 5 9.5 5 14 7 14 9.5 12 14 9.5 14z"/></svg>
+      <input type="text" placeholder="Search products..." id="searchInput">
+    </div>
+    <div class="cta">
+      <a class="btn-supplier" href="index.html#quote">Contact Supplier</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section class="pagehead">
+  <div class="container">
+    <h1>Products</h1>
+    <p class="crumb"><a href="index.html">Home</a> &gt; <span>Products</span></p>
+  </div>
+</section>
+
+<section class="filters">
+  <div class="container inner" id="filters">
+    <button class="active" data-cat="all" type="button">All Products</button>
+    <button data-cat="machines" type="button">Air Compressors</button>
+    <button data-cat="ends" type="button">Air Ends &amp; Heads</button>
+    <button data-cat="filters" type="button">Filters &amp; Separators</button>
+    <button data-cat="oils" type="button">Oil &amp; Lubricants</button>
+    <button data-cat="parts" type="button">Valves, Gears &amp; Parts</button>
+    <button data-cat="controls" type="button">Controls, Sensors &amp; Coolers</button>
+  </div>
+</section>
+
+<section class="plist">
+  <div class="container">
+    <div class="prods" id="prods"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="grid">
+      <div class="brand">
+        <img src="site-assets/products/product_03.png" alt="SONGJUN logo">
+        <p>Wuxi Songjun Machinery Technology Co., Ltd. supplies air compressors and OEM-matched spare parts for Atlas Copco, Ingersoll Rand, Sullair, Fusheng and more.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="#machines">Air Compressors</a></li>
+          <li><a href="#ends">Air Ends / Heads</a></li>
+          <li><a href="#filters">Filters / Separators</a></li>
+          <li><a href="#parts">Valves / Gears / Parts</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html#used">About SONGJUN</a></li>
+          <li><a href="index.html#showcase">Featured Products</a></li>
+          <li><a href="index.html#quote">Request a Quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:guo.zhao@wxsongjun.com">guo.zhao@wxsongjun.com</a></li>
+          <li><a href="https://wa.me/8615906189773" target="_blank" rel="noopener">+86 159 0618 9773</a></li>
+          <li>Wuxi, Jiangsu, China</li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>&copy; 2026 Wuxi Songjun Machinery Technology Co., Ltd. All rights reserved.</span>
+      <span>SONGJUN Air Compressor &amp; Parts</span>
+    </div>
+  </div>
+</footer>
+
+<div class="float-contact">
+  <a class="f-supplier" href="index.html#quote"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg><span>Contact Supplier</span></a>
+  <a class="f-wa" href="https://wa.me/8615906189773" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.1 14.1c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1-2.7-.9-4.9-3-6.2-5.8-.3-.7-.2-1.4.2-1.9.2-.2.4-.3.6-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.5.9 1.6 1.9 2.6 2.4.3.2.5.1.7-.1l.6-.7c.2-.2.4-.3.6-.2l1.9.9c.3.1.4.2.5.4 0 .3 0 .8-.2 1.4z"/></svg><span>WhatsApp</span></a>
+</div>
+
+<script>
+var PRODUCTS = [
+  {id:"P01", cat:"machines", img:"product_05.jpg", title:"Second-hand Screw Air Compressor GA18 GA30 GA37 GA45 GA55 GA75 GA90 (Atlas Copco)", price:"$6,810.86 - $10,650.56", moq:"MOQ 1 piece"},
+  {id:"P02", cat:"controls", img:"product_09.png", title:"Original Control Panel Element for Atlas Copco (Elektronikon Touch)", price:"$14,158.27", moq:"MOQ 1 piece"},
+  {id:"P03", cat:"machines", img:"product_10.jpg", title:"2026 DONGCHENG 1.5kw 2HP 50L Silent Oil-Free Portable Piston Air Compressor", price:"$670.69", moq:"MOQ 20 pieces"},
+  {id:"P04", cat:"ends", img:"product_14.jpg", title:"Full Range Original Air Compressor Air End ATLS (OEM 1616671290 1616831180 1616651284)", price:"$2,600 - $3,000", moq:"MOQ 1 piece"},
+  {id:"P05", cat:"controls", img:"product_15.jpg", title:"Ingersoll Rand Aluminum Oil Cooler 88157672 Replacement Screw Air Compressor Part", price:"$767.19", moq:"MOQ 2 pieces"},
+  {id:"P06", cat:"oils", img:"product_20.jpg", title:"Ingersoll Rand Centrifuge Oil 68140490 Replacement Part", price:"$1,033", moq:"MOQ 2 pieces"},
+  {id:"P07", cat:"ends", img:"product_22.jpg", title:"Air Compressor Head Portable New 1HP-550HP 220V Oil-Free Piston Pump", price:"$125", moq:"MOQ 50 pieces"},
+  {id:"P08", cat:"filters", img:"product_24.jpg", title:"Taiwan Fusheng 2116010149 Air Oil Separator Complete Replacement", price:"$37", moq:"MOQ 2 pieces"},
+  {id:"P09", cat:"filters", img:"product_25.jpg", title:"02250153-301 Sullair American Pipeline Filter Element (Filter Paper)", price:"$21", moq:"MOQ 2 pieces"},
+  {id:"P10", cat:"controls", img:"product_27.jpg", title:"Compair Metal Temperature Sensor 100003018 Screw-Type Air Compressor Part", price:"$97", moq:"MOQ 2 pieces"},
+  {id:"P11", cat:"parts", img:"product_30.jpg", title:"00512008 Ingersoll Rand Piston Air Compressor Valve Parts and Accessories", price:"$753.30", moq:"MOQ 2 pieces"},
+  {id:"P12", cat:"machines", img:"product_16.jpg", title:"G18 Oil Injected Rotary Screw Air Compressor (Atlas Copco GA Series)", price:"$780", moq:"MOQ 1 piece"},
+  {id:"P13", cat:"machines", img:"product_28.png", title:"LIUTECH LUY100-20 26 Bar Portable Diesel Screw Air Compressor", price:"$15,000", moq:"MOQ 1 piece"},
+  {id:"P14", cat:"parts", img:"product_12.jpg", title:"Original Atlas Industrial Use Polished Spiral Gear", price:"$50", moq:"MOQ 1 piece"},
+  {id:"P15", cat:"parts", img:"product_26.jpg", title:"Minimum Pressure Valve Maintenance Kit (OEM 1608047300 1615766786)", price:"$100", moq:"MOQ 1 piece"},
+  {id:"P16", cat:"machines", img:"product_08.jpg", title:"SONGJUN Centrifugal Air Compressor Complete Unit", price:"Contact us", priceContact:true, moq:"MOQ 1 piece"}
+];
+var CAT_NAMES = {machines:"Air Compressors", ends:"Air Ends & Heads", filters:"Filters & Separators", oils:"Oil & Lubricants", parts:"Valves, Gears & Parts", controls:"Controls, Sensors & Coolers"};
+
+function render(cat, keyword){
+  var grid = document.getElementById("prods");
+  grid.innerHTML = "";
+  var kw = (keyword || "").toLowerCase();
+  PRODUCTS.forEach(function(p){
+    if (cat !== "all" && p.cat !== cat) return;
+    if (kw && p.title.toLowerCase().indexOf(kw) < 0) return;
+    var a = document.createElement("a");
+    a.className = "prod";
+    a.href = "product.html?pid=" + p.id;
+    a.innerHTML =
+      '<div class="p-img"><img src="site-assets/products/' + p.img + '" alt="' + p.title + '" loading="lazy">' +
+      '<span class="p-moq">' + p.moq + '</span>' +
+      '<span class="p-cat">' + CAT_NAMES[p.cat] + '</span></div>' +
+      '<div class="p-body"><div class="p-title">' + p.title + '</div>' +
+      '<div class="p-price' + (p.priceContact ? ' contact' : '') + '">' + p.price + '</div>' +
+      '<span class="p-btn">View Details</span></div>';
+    grid.appendChild(a);
+  });
+}
+
+document.getElementById("filters").addEventListener("click", function(e){
+  var btn = e.target.closest("button");
+  if (!btn) return;
+  document.querySelectorAll("#filters button").forEach(function(b){ b.classList.remove("active"); });
+  btn.classList.add("active");
+  render(btn.getAttribute("data-cat"), document.getElementById("searchInput").value);
+});
+document.getElementById("searchInput").addEventListener("input", function(){
+  var active = document.querySelector("#filters button.active");
+  render(active ? active.getAttribute("data-cat") : "all", this.value);
+});
+document.getElementById("hamburger").addEventListener("click", function(){
+  document.getElementById("navlinks").classList.toggle("open");
+});
+render("all", "");
+</script>
+</body>
+</html>
