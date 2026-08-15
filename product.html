@@ -189,7 +189,7 @@
       <div class="price" id="pPrice"></div>
       <div class="catline" id="pCat"></div>
       <p class="desc" id="pDesc"></p>
-      <div class="specs">
+      <div class="specs" id="specBox">
         <div class="spec-title">Specifications</div>
         <table id="specTable"></table>
       </div>
@@ -286,58 +286,9 @@
   <a class="f-wa" href="https://wa.me/8615906189773" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.1 14.1c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1-2.7-.9-4.9-3-6.2-5.8-.3-.7-.2-1.4.2-1.9.2-.2.4-.3.6-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.5.9 1.6 1.9 2.6 2.4.3.2.5.1.7-.1l.6-.7c.2-.2.4-.3.6-.2l1.9.9c.3.1.4.2.5.4 0 .3 0 .8-.2 1.4z"/></svg><span>WhatsApp</span></a>
 </div>
 
+<script src="products-data.js"></script>
 <script>
-var PRODUCTS = [
-  {id:"P01", cat:"machines", img:"product_05.jpg", title:"Second-hand Screw Air Compressor GA18 GA30 GA37 GA45 GA55 GA75 GA90 (Atlas Copco)", price:"$6,810.86 - $10,650.56", moq:"MOQ 1 piece", priceContact:false,
-   desc:"Serviced second-hand Atlas Copco screw air compressors from GA18 to GA90. Inspected, tested and ready for export with warranty support.",
-   specs:[["Type","Rotary screw"],["Condition","Second-hand"],["Series","GA18 / GA30 / GA37 / GA45 / GA55 / GA75 / GA90"],["Warranty","1 year"]]},
-  {id:"P02", cat:"controls", img:"product_09.png", title:"Original Control Panel Element for Atlas Copco (Elektronikon Touch)", price:"$14,158.27", moq:"MOQ 1 piece", priceContact:false,
-   desc:"Original Atlas Copco Elektronikon Touch control panel element for screw air compressor control systems.",
-   specs:[["Type","Control panel element"],["Brand","Atlas Copco"],["System","Elektronikon Touch"],["Warranty","1 year"]]},
-  {id:"P03", cat:"machines", img:"product_10.jpg", title:"2026 DONGCHENG 1.5kw 2HP 50L Silent Oil-Free Portable Piston Air Compressor", price:"$670.69", moq:"MOQ 20 pieces", priceContact:false,
-   desc:"DONGCHENG 1.5kW silent oil-free portable piston air compressor with 50L tank for workshops and light industrial use.",
-   specs:[["Type","Piston"],["Power","1.5 kW / 2 HP"],["Tank","50L"],["Lubrication","Oil-free"],["Noise","Silent design"]]},
-  {id:"P04", cat:"ends", img:"product_14.jpg", title:"Full Range Original Air Compressor Air End ATLS (OEM 1616671290 1616831180 1616651284)", price:"$2,600 - $3,000", moq:"MOQ 1 piece", priceContact:false,
-   desc:"Full range of original air compressor airends with ATLS OEM numbers. Air-cooled, oil-free airend for screw compressor replacement.",
-   specs:[["Type","Air end / Airend"],["OEM numbers","1616671290 / 1616831180 / 1616651284 / 1616716287 / 1616869380"],["Lubrication","Oil-free"],["Cooling","Air cooled"],["Voltage","220V / 110V customizable"],["Weight","250 KG"],["Warranty","1 year"]]},
-  {id:"P05", cat:"controls", img:"product_15.jpg", title:"Ingersoll Rand Aluminum Oil Cooler 88157672 Replacement Screw Air Compressor Part", price:"$767.19", moq:"MOQ 2 pieces", priceContact:false,
-   desc:"Ingersoll Rand aluminum oil cooler, OEM 88157672, direct replacement for screw air compressor cooling systems.",
-   specs:[["Type","Oil cooler"],["OEM","88157672"],["Material","Aluminum alloy"],["Package","40 x 10 x 10 cm"],["Gross weight","10.0 kg"],["Warranty","1 year"]]},
-  {id:"P06", cat:"oils", img:"product_20.jpg", title:"Ingersoll Rand Centrifuge Oil 68140490 Replacement Part", price:"$1,033", moq:"MOQ 2 pieces", priceContact:false,
-   desc:"Ingersoll Rand centrifuge oil, OEM 68140490, for screw air compressor lubrication systems. Factory video inspection available.",
-   specs:[["Type","Centrifuge oil"],["OEM","68140490"],["Warranty","1 year"],["Factory video inspection","Yes"]]},
-  {id:"P07", cat:"ends", img:"product_22.jpg", title:"Air Compressor Head Portable New 1HP-550HP 220V Oil-Free Piston Pump", price:"$125", moq:"MOQ 50 pieces", priceContact:false,
-   desc:"New portable oil-free piston compressor head, 1HP-550HP range, 220V. Direct replacement pump head for piston air compressors.",
-   specs:[["Type","Piston head / Pump"],["Lubrication","Oil-free"],["Cooling","Air cooled"],["Voltage","220V"],["Working pressure","0.6 Bar"],["Power","1.5 kW"],["Weight","30 kg"],["Flow rate","140 L/min @ 2 Bar"],["Brand","COMBESTAIR"],["Model","BST DC 300-7"],["Warranty","1 year"]]},
-  {id:"P08", cat:"filters", img:"product_24.jpg", title:"Taiwan Fusheng 2116010149 Air Oil Separator Complete Replacement", price:"$37", moq:"MOQ 2 pieces", priceContact:false,
-   desc:"Taiwan Fusheng air oil separator, OEM 2116010149, complete replacement for screw air compressor oil separation systems.",
-   specs:[["Type","Air oil separator"],["OEM","2116010149"],["Brand","Fusheng"],["Warranty","1 year"],["Factory video inspection","Available"]]},
-  {id:"P09", cat:"filters", img:"product_25.jpg", title:"02250153-301 Sullair American Pipeline Filter Element (Filter Paper)", price:"$21", moq:"MOQ 2 pieces", priceContact:false,
-   desc:"Sullair American pipeline filter element, OEM 02250153-301, filter paper construction for screw air compressor filtration.",
-   specs:[["Type","Pipeline filter element"],["OEM","02250153-301"],["Material","Filter paper"],["Warranty","3 months"]]},
-  {id:"P10", cat:"controls", img:"product_27.jpg", title:"Compair Metal Temperature Sensor 100003018 Screw-Type Air Compressor Part", price:"$97", moq:"MOQ 2 pieces", priceContact:false,
-   desc:"Compair metal temperature sensor, OEM 100003018, screw-type mounting for air compressor temperature monitoring.",
-   specs:[["Type","Temperature sensor"],["OEM","100003018"],["Material","Metal"],["Stock","In stock"],["Warranty","1 year"]]},
-  {id:"P11", cat:"parts", img:"product_30.jpg", title:"00512008 Ingersoll Rand Piston Air Compressor Valve Parts and Accessories", price:"$753.30", moq:"MOQ 2 pieces", priceContact:false,
-   desc:"Ingersoll Rand piston air compressor valve parts and accessories, OEM 00512008, metal construction.",
-   specs:[["Type","Valve parts & accessories"],["OEM","00512008"],["Brand","Ingersoll Rand"],["Material","Metal"],["Warranty","1 year"]]},
-  {id:"P12", cat:"machines", img:"product_16.jpg", title:"G18 Oil Injected Rotary Screw Air Compressor (Atlas Copco GA Series)", price:"$780", moq:"MOQ 1 piece", priceContact:false,
-   desc:"G18 oil injected rotary screw air compressor from the Atlas Copco GA series. Compact, enclosed and ready for operation.",
-   specs:[["Type","Oil injected rotary screw"],["Series","Atlas Copco GA"],["Model","G18"],["Configuration","Enclosed"]]},
-  {id:"P13", cat:"machines", img:"product_28.png", title:"LIUTECH LUY100-20 26 Bar Portable Diesel Screw Air Compressor", price:"$15,000", moq:"MOQ 1 piece", priceContact:false,
-   desc:"LIUTECH LUY100-20 portable diesel screw air compressor, up to 26 Bar working pressure, for mining and construction applications.",
-   specs:[["Type","Rotary screw"],["Brand","LIUTECH"],["Model","LUY100-20"],["Power source","Diesel"],["Working pressure","12-26 bar"],["Power","295 kW"],["Cooling","Air cooled"],["Configuration","Portable / mobile"],["Voltage","380V"],["Weight","5150 kg"]]},
-  {id:"P14", cat:"parts", img:"product_12.jpg", title:"Original Atlas Industrial Use Polished Spiral Gear", price:"$50", moq:"MOQ 1 piece", priceContact:false,
-   desc:"Original Atlas industrial polished spiral gear for air compressor drive systems.",
-   specs:[["Type","Spiral gear"],["Brand","Atlas"],["Finish","Polished"]]},
-  {id:"P15", cat:"parts", img:"product_26.jpg", title:"Minimum Pressure Valve Maintenance Kit (OEM 1608047300 1615766786)", price:"$100", moq:"MOQ 1 piece", priceContact:false,
-   desc:"Minimum pressure valve maintenance kit for Atlas Copco screw air compressors. Includes valve service components.",
-   specs:[["Type","Maintenance kit"],["OEM numbers","1608047300 / 1615766786"],["Application","Atlas Copco compressors"],["Material","Metal / plastic"],["Warranty","1 year"]]},
-  {id:"P16", cat:"machines", img:"product_08.jpg", title:"SONGJUN Centrifugal Air Compressor Complete Unit", price:"Contact us", moq:"MOQ 1 piece", priceContact:true,
-   desc:"SONGJUN brand centrifugal air compressor complete unit. Contact us for model options, specifications and pricing.",
-   specs:[["Type","Centrifugal"],["Brand","SONGJUN"],["Condition","New"]]}
-];
-var CAT_NAMES = {machines:"Air Compressors", ends:"Air Ends & Heads", filters:"Filters & Separators", oils:"Oil & Lubricants", parts:"Valves, Gears & Parts", controls:"Controls, Sensors & Coolers"};
+var CAT_NAMES = {machines:"Air Compressors", ends:"Air Ends & Heads", filters:"Filters & Separators", oils:"Oil & Lubricants", valves:"Valves & Switches", controls:"Controls & Sensors", coolers:"Coolers & Fans", parts:"Parts & Accessories"};
 
 function getPid(){
   var m = location.search.match(/[?&]pid=([A-Za-z0-9]+)/);
@@ -352,18 +303,22 @@ function findProduct(id){
   var p = findProduct(getPid());
   document.title = p.title + " | SONGJUN";
   document.getElementById("crumbTitle").textContent = p.title.length > 50 ? p.title.slice(0, 50) + "..." : p.title;
-  document.getElementById("mainImg").src = "site-assets/products/" + p.img;
+  document.getElementById("mainImg").src = "site-assets/" + p.img;
   document.getElementById("mainImg").alt = p.title;
   document.getElementById("moqTag").textContent = p.moq;
   document.getElementById("pTitle").textContent = p.title;
   var priceEl = document.getElementById("pPrice");
   priceEl.textContent = p.price;
-  if (p.priceContact) priceEl.className = "price contact";
+  if (p.contact) priceEl.className = "price contact";
   document.getElementById("pCat").innerHTML = "Category: <b>" + CAT_NAMES[p.cat] + "</b>";
   document.getElementById("pDesc").textContent = p.desc;
   var rows = "";
-  p.specs.forEach(function(s){ rows += "<tr><td>" + s[0] + "</td><td>" + s[1] + "</td></tr>"; });
-  document.getElementById("specTable").innerHTML = rows;
+  if (p.specs && p.specs.length) {
+    p.specs.forEach(function(s){ rows += "<tr><td>" + s[0] + "</td><td>" + s[1] + "</td></tr>"; });
+    document.getElementById("specTable").innerHTML = rows;
+  } else {
+    document.getElementById("specBox").style.display = "none";
+  }
   document.getElementById("q-product").value = p.title;
   var waText = encodeURIComponent("Hello, I am interested in: " + p.title + " (" + p.price + ")");
   document.getElementById("waLink").href = "https://wa.me/8615906189773?text=" + waText;
@@ -384,7 +339,7 @@ function findProduct(id){
     var a = document.createElement("a");
     a.className = "prod";
     a.href = "product.html?pid=" + r.id;
-    a.innerHTML = '<div class="p-img"><img src="site-assets/products/' + r.img + '" alt="' + r.title + '" loading="lazy"></div>' +
+    a.innerHTML = '<div class="p-img"><img src="site-assets/' + r.img + '" alt="' + r.title + '" loading="lazy"></div>' +
       '<div class="p-body"><div class="p-title">' + r.title + '</div><div class="p-price">' + r.price + '</div></div>';
     grid.appendChild(a);
   });
